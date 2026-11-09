@@ -53,6 +53,7 @@ def predict_image(image):
     prediction = model.predict(processed, verbose=0)
     digit_number = int(np.argmax(prediction[0]))
     accuracy = float(np.max(prediction[0]))
+    probabilities = prediction[0].tolist()
 
-    return digit_number, accuracy
+    return digit_number, accuracy, probabilities
 

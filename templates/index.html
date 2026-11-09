@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,5 +27,54 @@
             <p class="value" id="prediction">--</p>
         </div>
     </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI guess my number.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head> 
+<body> 
+    <main class="app">
+        <header class="intro">
+            <h3>Handwritten Digit Recognition (0-9)</h3>
+            <p>Draw a digit and let the AI that I made recognize it.</p>
+        </header>
+
+        <section class="board">
+            <div class="draw">
+                <canvas id="drawingCanvas" width="280" height="280"></canvas>
+                <div class="buttons">
+                    <button id="clearButton" class="btn secondary">Clear</button>
+                    <button id="recognizeButton" class="btn primary">Recognize</button>
+                </div>
+            </div>
+
+                        <div class="output">
+                <div class="container">
+                    <div class="box">
+                        <p class="label">Prediction</p>
+                        <p class="value big" id="prediction">--</p>
+                    </div>
+                    <div class="box">
+                        <p class="label">Confidence</p>
+                        <p class="value" id="accuracy">--%</p>
+                    </div>
+                </div>
+
+                <div class="bars" id="bars"></div>
+
+                <p id="result">Your prediction will appear here.</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

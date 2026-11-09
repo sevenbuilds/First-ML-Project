@@ -10,14 +10,15 @@ def home():
 @app.route("/predict", methods=["POST"])
 def predict():
     if "image" not in request.files:
-        return jsonify({"error: no image provided"}), 400
+        return jsonify({"error": "no image provided"}), 400
     image = request.files["image"]
 
-    try: 
-        digit, accuracy = predict_image(image.read())
+    try:
+        digit, accuracy, probabilities = predict_image(image.read())
         return jsonify({
             "prediction": digit,
-            "accuracy": accuracy
+            "accuracy": accuracy,
+            "probabilities": probabilities
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 400

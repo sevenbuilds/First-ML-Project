@@ -23,6 +23,7 @@ I started this project with the aim of getting started on ML. so far I managed t
 - **Handwritten Digit-Recognition**: Uses a trained AI model to recognize what's written in the canvas.
 - **Canvas Reset:** Allows you to reset the canvas and try a new digit.
 - **Web-Based Interface:** Provides an accessible interface built with HTML, CSS and JS, powerd by Flask backend.
+- **Probability Graph:** A graph that shows how much your digit represents the prediction by AI.
 
 ## 🚀 How to run:
 1. Mouse-drag to draw on the Canvas.
