@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI guess my number.</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <h3> Hand Written Digit Recognition (0-9)</h3>
+    <p> Draw a digit and let the AI that I made, recognize it.</p>
+
+    <canvas id="drawingCanvas" width="280" height="280" style="border: 3px solid red; background: white;"></canvas>
+    <div>
+        <button id="clearButton">clear</button>
+        <button id="recognizeButton">Recognize</button>
+    </div>
+    <p id="result"> Your prediction will appear here.</p>
+    <div class="container">
+        <div class="box">
+            <p class="label">Confidence:</p>
+            <p class="value" id="accuracy">--%</p>
+        </div>
+        <div class="box">
+            <p class="label">Prediction:</p>
+            <p class="value" id="prediction">--</p>
+        </div>
+    </div>
+</body>
+</html>
